@@ -122,4 +122,8 @@ h2 {
   .card__description {
     grid-column: span 2;
   }
+
+  .card__price {
+    border-bottom-left-radius: 8px;
+  }
 }
