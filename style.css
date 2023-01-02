@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-100: hsl(71, 73%, 54%);
+  --clr-primary-125: hsl(179, 61%, 74%);
+  --clr-primary-150: hsl(179, 62%, 43%);
+
+  --clr-neutral-100: hsl(204, 43%, 93%);
+  --clr-neutral-200: hsl(218, 22%, 67%);
+
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+  --ff: "Karla", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+body {
+  display: grid;
+  place-content: center center;
+  place-items: center center;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  font-family: var(--ff);
+  background-color: var(--clr-neutral-200);
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+h2 {
+  font-size: 1.1rem;
+}
+
+.card {
+  width: 90%;
+}
+.card__description {
+  background-color: var(--clr-neutral-100);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.card__description h1 {
+  color: var(--clr-primary-150);
+}
+
+.card__description h2 {
+  color: var(--clr-primary-100);
+}
+
+.card__description p {
+  color: var(--clr-neutral-200);
+}
+
+.card__price {
+  background-color: var(--clr-primary-150);
+  color: var(--clr-neutral-100);
+}
+.card__price div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.card__price button {
+  display: block;
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--clr-primary-100);
+  border: none;
+  color: var(--clr-neutral-100);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card__price__price {
+  font-size: 1.7rem;
+  margin: 0;
+}
+.card__price__pcm {
+  color: var(--clr-neutral-200);
+  margin: 0;
+}
+
+.card__price > p {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.card__services {
+  background-color: var(--clr-primary-125);
+  color: var(--clr-neutral-100);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card__services ul {
+  padding: 0;
+  margin: 0;
+}
+
+.card__services ul li {
+  list-style-type: none;
+}
+.card__description,
+.card__price,
+.card__services {
+  padding: 1.6rem;
+}
+
+@media screen and (min-width: 23em) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__description {
+    grid-column: span 2;
+  }
+}
